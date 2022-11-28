@@ -28,37 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TextBoxA = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.TextBoxB = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.TextBoxC = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
-            this.TextBoxD = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxC)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxD)).BeginInit();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // TextBoxA
-            // 
-            this.TextBoxA.Location = new System.Drawing.Point(82, 36);
-            this.TextBoxA.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.TextBoxA.Minimum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            -2147483648});
-            this.TextBoxA.Name = "TextBoxA";
-            this.TextBoxA.Size = new System.Drawing.Size(120, 20);
-            this.TextBoxA.TabIndex = 0;
             // 
             // label1
             // 
@@ -78,23 +57,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "b";
             // 
-            // TextBoxB
-            // 
-            this.TextBoxB.Location = new System.Drawing.Point(82, 74);
-            this.TextBoxB.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.TextBoxB.Minimum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            -2147483648});
-            this.TextBoxB.Name = "TextBoxB";
-            this.TextBoxB.Size = new System.Drawing.Size(120, 20);
-            this.TextBoxB.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -104,23 +66,6 @@
             this.label3.TabIndex = 5;
             this.label3.Text = "c";
             // 
-            // TextBoxC
-            // 
-            this.TextBoxC.Location = new System.Drawing.Point(82, 110);
-            this.TextBoxC.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.TextBoxC.Minimum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            -2147483648});
-            this.TextBoxC.Name = "TextBoxC";
-            this.TextBoxC.Size = new System.Drawing.Size(120, 20);
-            this.TextBoxC.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -129,23 +74,6 @@
             this.label4.Size = new System.Drawing.Size(13, 13);
             this.label4.TabIndex = 7;
             this.label4.Text = "d";
-            // 
-            // TextBoxD
-            // 
-            this.TextBoxD.Location = new System.Drawing.Point(82, 145);
-            this.TextBoxD.Maximum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            0});
-            this.TextBoxD.Minimum = new decimal(new int[] {
-            1410065408,
-            2,
-            0,
-            -2147483648});
-            this.TextBoxD.Name = "TextBoxD";
-            this.TextBoxD.Size = new System.Drawing.Size(120, 20);
-            this.TextBoxD.TabIndex = 6;
             // 
             // button1
             // 
@@ -158,42 +86,65 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(81, 38);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(121, 20);
+            this.textBox1.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(81, 73);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(121, 20);
+            this.textBox2.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(81, 109);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(121, 20);
+            this.textBox3.TabIndex = 11;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(81, 144);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(121, 20);
+            this.textBox4.TabIndex = 12;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(266, 244);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.TextBoxD);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.TextBoxC);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.TextBoxB);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.TextBoxA);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxC)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.TextBoxD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.NumericUpDown TextBoxA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown TextBoxB;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.NumericUpDown TextBoxC;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown TextBoxD;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 

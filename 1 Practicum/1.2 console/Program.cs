@@ -10,7 +10,8 @@ namespace _1._2_console
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Введи число >> ");
+            // Написать программу, которая проверяет, является ли заданное целое число нечетным
+            Console.Write("Введи число >> ");
             if (double.TryParse(Console.ReadLine(), out double number))
             {
                 if (number % 2 == 1) Console.WriteLine("Число является нечетным");
