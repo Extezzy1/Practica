@@ -22,10 +22,10 @@ namespace _2._1_console
                 {
                     int r1 = 25;
                     int r2 = 100;
-                    double SquareSum = x * x + y * y;
+                    double squareSum = x * x + y * y;
 
-                    if (SquareSum > r1 && SquareSum < r2) Console.WriteLine("Да");
-                    else if (SquareSum == r1 || SquareSum == r2) Console.WriteLine("На границе");
+                    if (squareSum == r1 || squareSum == r2) Console.WriteLine("На границе");
+                    else if (squareSum > r1 && squareSum < r2) Console.WriteLine("Да");
                     else Console.WriteLine("Нет");
                 }
                 else Console.WriteLine("Введено неверное значение y");
