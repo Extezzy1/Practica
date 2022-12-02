@@ -12,12 +12,12 @@ namespace _1._2_console
         {
             // Написать программу, которая проверяет, является ли заданное целое число нечетным
             Console.Write("Введи число >> ");
-            if (double.TryParse(Console.ReadLine(), out double number))
+            if (int.TryParse(Console.ReadLine(), out int number))
             {
-                if (number % 2 == 1) Console.WriteLine("Число является нечетным");
+                if (Math.Abs(number) % 2 == 1) Console.WriteLine("Число является нечетным");
                 else Console.WriteLine("Число не является нечетным");
             }
-            else Console.WriteLine("Введенные данные должны быть числом!");
+            else Console.WriteLine("Введенные данные должны быть целым числом!");
         }
     }
 }

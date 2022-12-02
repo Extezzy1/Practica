@@ -19,12 +19,12 @@ namespace _1._2_gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (double.TryParse(textBox1.Text, out double result))
+            if (int.TryParse(textBox1.Text, out int result))
             {
-                if (result % 2 == 1) MessageBox.Show("Введенное число является нечетным");
+                if (Math.Abs(result) % 2 == 1) MessageBox.Show("Введенное число является нечетным");
                 else MessageBox.Show("Введенное число не является нечетным");
             }
-            else MessageBox.Show("Введенные данные должны являться числом");
+            else MessageBox.Show("Введенные данные должны являться целым числом");
         }
     }
 }

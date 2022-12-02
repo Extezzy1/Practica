@@ -34,9 +34,25 @@ namespace _2._2_console
                         else Console.WriteLine($"Количество дней до конца месяца - {30 - numberOfDay}");
                         break;
                     case "февраль":
-                        if (numberOfDay >= 29) Console.WriteLine("В данном месяце только 28 дней!");
-                        else Console.WriteLine($"Количество дней до конца месяца - {28 - numberOfDay}");
+                        Console.Write("Год високосный? (Да/Нет) >> ");
+                        string isLeapYear = Console.ReadLine().ToLower();
+                        if (isLeapYear == "да")
+                        {
+                            if (numberOfDay > 29) Console.WriteLine("В данном месяце только 29 дней!");
+                            else Console.WriteLine($"Количество дней до конца месяца - {29 - numberOfDay}");
+                        }
+                        else if (isLeapYear == "нет")
+                        {
+                            if (numberOfDay >= 29) Console.WriteLine("В данном месяце только 28 дней!");
+                            else Console.WriteLine($"Количество дней до конца месяца - {28 - numberOfDay}");
+                            
+                        }
+                        else
+                        {
+                            Console.WriteLine("Поддерживаются ответы Да/Нет");
+                        }
                         break;
+
                 }
             }
             else Console.WriteLine("Неверный номер дня");
