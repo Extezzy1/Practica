@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1 console", "5.1 console\5.1 console.csproj", "{7BC1BD40-1AF9-4C9C-8F31-1E4A84026330}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "5.1 console", "5.1 console\5.1 console.csproj", "{7BC1BD40-1AF9-4C9C-8F31-1E4A84026330}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1 gui", "5.2 gui\5.1 gui.csproj", "{3C34FF8E-E2E3-4499-B298-5799C1933186}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "5.1 gui", "5.1 gui\5.1 gui.csproj", "{3C34FF8E-E2E3-4499-B298-5799C1933186}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication1", "ConsoleApplication1\ConsoleApplication1.csproj", "{811718ED-74DD-4BDA-B9D0-A895BC1892DE}"
 EndProject
