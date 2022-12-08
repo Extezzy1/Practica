@@ -16,6 +16,7 @@ namespace _4._1_Console
             else Console.WriteLine("Неверное значение n!");
         }
 
+
         static double calculateFunc(int n, double b1)
         {
             if (n == 1) return b1;

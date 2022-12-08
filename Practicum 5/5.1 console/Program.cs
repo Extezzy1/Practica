@@ -16,6 +16,11 @@ namespace _5._1_console
                     if (int.TryParse(Console.ReadLine(), out int h))
                     {
 
+                        if (h <= 0)
+                        {
+                            Console.WriteLine("h должно быть больше нуля!");
+                            return;
+                        }
                         if (a < b)
                         {
                             for (int i = a; i <= b; i += h)
@@ -25,9 +30,13 @@ namespace _5._1_console
 
                                     if (i == 0) throw new DivideByZeroException();
                                     
-                                    Console.WriteLine($"f({i})={Math.Round(Math.Pow((i - 1), 2) / i, 5)}");
+                                    Console.WriteLine($"f({i})={fx(i)}");
                                 }
                                 catch (DivideByZeroException ex)
+                                {
+                                    Console.WriteLine($"В точке {i} функция не существует!");
+                                }
+                                catch (Exception ex)
                                 {
                                     Console.WriteLine($"В точке {i} функция не существует!");
                                 }
@@ -42,9 +51,13 @@ namespace _5._1_console
                                 {
                                     if (i == 0) throw new DivideByZeroException();
 
-                                    Console.WriteLine($"f({i})={Math.Round(Math.Pow((i - 1), 2) / i, 5)}");
+                                    Console.WriteLine($"f({i})={fx(i)}");
                                 }
                                 catch (DivideByZeroException ex)
+                                {
+                                    Console.WriteLine($"В точке {i} функция не существует!");
+                                }
+                                catch (Exception ex)
                                 {
                                     Console.WriteLine($"В точке {i} функция не существует!");
                                 }
@@ -58,6 +71,10 @@ namespace _5._1_console
                 else Console.WriteLine("Неверное значение b!");
             }
             else Console.WriteLine("Неверное значение a!");
+        }
+        static double fx(int i)
+        {
+            return Math.Round(Math.Exp((Math.Pow((i - 1), 2) / i)), 5);
         }
     }
 }
