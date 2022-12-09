@@ -14,7 +14,8 @@ namespace _6._1._2_console
         // Двумерный массив
         static void Main(string[] args)
         {
-            int n, m, a, b;
+            int n, m;
+            double a, b;
 
             Console.Write("Введи количество строк массива (n) >> ");
             if (int.TryParse(Console.ReadLine(), out n) && n > 0)
@@ -23,10 +24,10 @@ namespace _6._1._2_console
                 if (int.TryParse(Console.ReadLine(), out m) && m > 0)
                 {
                     Console.Write("Введи a >> ");
-                    if (int.TryParse(Console.ReadLine(), out a))
+                    if (double.TryParse(Console.ReadLine(), out a))
                     {
                         Console.Write("Введи b >> ");
-                        if (int.TryParse(Console.ReadLine(), out b))
+                        if (double.TryParse(Console.ReadLine(), out b))
                         {
                             if (a >= b)
                             {

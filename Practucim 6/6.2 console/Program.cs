@@ -40,9 +40,9 @@ namespace _6._2_console
         {
             for (int i = 0; i < mas.Length; i++)
             {
-                int item;
+                double item;
                 Console.Write($"Введи [{i}] элемент >> ");
-                while (!int.TryParse(Console.ReadLine(), out item))
+                while (!double.TryParse(Console.ReadLine(), out item))
                 {
                     Console.WriteLine("Неверное значение элемента!");
                     Console.Write($"Введи [{i}] элемент >> ");

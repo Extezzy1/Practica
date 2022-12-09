@@ -23,8 +23,10 @@ namespace _6._1._2_gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(EnterN.Text, out int n) && n > 0 && int.TryParse(EnterA.Text, out int a) &&
-                int.TryParse(EnterB.Text, out int b) && int.TryParse(EnterM.Text, out int m) && m > 0)
+            int n, m;
+            double a, b;
+            if (int.TryParse(EnterN.Text, out n) && n > 0 && double.TryParse(EnterA.Text, out a) &&
+                double.TryParse(EnterB.Text, out b) && int.TryParse(EnterM.Text, out m) && m > 0)
             {
                 int[,] mas = new int[n,m];
                 Random rnd = new Random();
@@ -33,7 +35,7 @@ namespace _6._1._2_gui
                 {
                     for (int j = 0; j < m; j++)
                     {
-                        mas[i, j] = rnd.Next(a - 10, b);
+                        mas[i, j] = rnd.Next(0, 1000);
                         ResultTextBox.Text += $"{mas[i, j]} ";
                     }
                     ResultTextBox.Text += Environment.NewLine;

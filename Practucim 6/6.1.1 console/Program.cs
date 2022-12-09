@@ -14,7 +14,8 @@ namespace _6._1_console
         // Одномерный массив
         static void Main(string[] args)
         {
-            int n, a, b;
+            int n;
+            double a, b;
 
             Console.Write("Введи количество строк массива (n) >> ");
             while (!int.TryParse(Console.ReadLine(), out n) || n <= 0)
@@ -24,14 +25,14 @@ namespace _6._1_console
             }
 
             Console.Write("Введи a >> ");
-            while (!int.TryParse(Console.ReadLine(), out a))
+            while (!double.TryParse(Console.ReadLine(), out a))
             {
                 Console.WriteLine("Неверное значение a!");
                 Console.Write("Введи a >> ");
             }
 
             Console.Write("Введи b >> ");
-            while (!int.TryParse(Console.ReadLine(), out b))
+            while (!double.TryParse(Console.ReadLine(), out b))
             {
                 Console.WriteLine("Неверное значение b!");
                 Console.Write("Введи b >> ");

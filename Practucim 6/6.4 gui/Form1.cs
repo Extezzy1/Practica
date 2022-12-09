@@ -21,7 +21,8 @@ namespace _6._4_gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(textBox1.Text, out int n) && n > 0 && int.TryParse(textBox3.Text, out int X) && X > 0)
+            int n, X;
+            if (int.TryParse(textBox1.Text, out n) && n > 0 && int.TryParse(textBox3.Text, out X) && X > 0)
             {
                 int[][] mas = new int[n][];
                 for (int i = 0; i < n; i++) mas[i] = new int[n];

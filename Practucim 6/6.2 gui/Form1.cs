@@ -22,7 +22,8 @@ namespace _6._2_gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (int.TryParse(EnterN.Text, out int n) && n > 0)
+            int n;
+            if (int.TryParse(EnterN.Text, out n) && n > 0)
             {
                 double[] mas = new double[n];
                 Random rnd = new Random();
