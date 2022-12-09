@@ -4,18 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _6._1_console
+namespace _6._1._2_console
 {
-    class Program
+    internal class Program
     {
+        //2.	Заменить все элементы, попадающие в интервал  [a, b], нулем.
+        //Задачи из данного пункта решить двумя способами, используя одномерный массив, а затем двумерный.
+        //Размерность массива вводится с клавиатуры.
+        // Двумерный массив
         static void Main(string[] args)
         {
             int n, m, a, b;
-            
-            Console.Write("Введи n >> ");
+
+            Console.Write("Введи количество строк массива (n) >> ");
             if (int.TryParse(Console.ReadLine(), out n) && n > 0)
             {
-                Console.Write("Введи m >> ");
+                Console.Write("Введи количество столбцов массива (m) >> ");
                 if (int.TryParse(Console.ReadLine(), out m) && m > 0)
                 {
                     Console.Write("Введи a >> ");
@@ -34,7 +38,7 @@ namespace _6._1_console
                                 int[,] mas = new int[n, m];
                                 EnterElArray(ref mas, n, m);
 
-                                for (int i =0; i < n; i++)
+                                for (int i = 0; i < n; i++)
                                 {
                                     for (int j = 0; j < m; j++)
                                     {
