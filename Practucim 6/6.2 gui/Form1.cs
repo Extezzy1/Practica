@@ -23,14 +23,17 @@ namespace _6._2_gui
         private void button1_Click(object sender, EventArgs e)
         {
             int n;
-            if (int.TryParse(EnterN.Text, out n) && n > 0)
+            string[] numbers = EnterN.Text.Trim().Split(' ');
+            n = numbers.Length;
+            if (n > 0)
             {
                 double[] mas = new double[n];
                 Random rnd = new Random();
                 ResultTextBox.Text = "Изначальный массив:" + Environment.NewLine;
                 for (int i = 0; i < mas.Length; i++)
                 {
-                    mas[i] = rnd.Next(0, 1000);
+                    double.TryParse(numbers[i], out mas[i]);
+                    //mas[i] = double.Parse(numbers[i]);
                     ResultTextBox.Text += $"{mas[i]} ";
                 }
 

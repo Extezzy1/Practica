@@ -47,7 +47,7 @@
             // ResultButton
             // 
             this.ResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResultButton.Location = new System.Drawing.Point(87, 98);
+            this.ResultButton.Location = new System.Drawing.Point(86, 129);
             this.ResultButton.Name = "ResultButton";
             this.ResultButton.Size = new System.Drawing.Size(130, 39);
             this.ResultButton.TabIndex = 10;
@@ -57,19 +57,20 @@
             // 
             // EnterN
             // 
-            this.EnterN.Location = new System.Drawing.Point(126, 47);
+            this.EnterN.Location = new System.Drawing.Point(157, 38);
+            this.EnterN.Multiline = true;
             this.EnterN.Name = "EnterN";
-            this.EnterN.Size = new System.Drawing.Size(136, 20);
+            this.EnterN.Size = new System.Drawing.Size(136, 57);
             this.EnterN.TabIndex = 9;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(57, 50);
+            this.label1.Location = new System.Drawing.Point(12, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(139, 13);
             this.label1.TabIndex = 8;
-            this.label1.Text = "Введи n";
+            this.label1.Text = "Введи элементы массива";
             // 
             // Form1
             // 

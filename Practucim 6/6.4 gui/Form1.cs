@@ -22,7 +22,7 @@ namespace _6._4_gui
         private void button1_Click(object sender, EventArgs e)
         {
             int n, X;
-            if (int.TryParse(textBox1.Text, out n) && n > 0 && int.TryParse(textBox3.Text, out X) && X > 0)
+            if (int.TryParse(textBox1.Text, out n) && n > 0)
             {
                 int[][] mas = new int[n][];
                 for (int i = 0; i < n; i++) mas[i] = new int[n];
@@ -32,27 +32,30 @@ namespace _6._4_gui
                 {
                     for (int j = 0; j < n; j++)
                     {
-                        mas[i][j] = rnd.Next(0, 1000);
+                        mas[i][j] = rnd.Next(-1000, 1000);
                         textBox2.Text += $"{mas[i][j]} ";
                     }
                     textBox2.Text += Environment.NewLine;
                 }
 
                 textBox2.Text += Environment.NewLine + "Сгенерированный массив - вектор:" + Environment.NewLine;
-                int[] VectorX = new int[X];
-                for (int i = 0; i < X; i++)
+                int[] VectorX = new int[n];
+                for (int i = 0; i < n; i++)
                 {
-                    VectorX[i] = rnd.Next(0, 1000);
+                    VectorX[i] = rnd.Next(-1000, 1000);
                     textBox2.Text += $"{VectorX[i]} ";
                 }
 
                 textBox2.Text += Environment.NewLine + Environment.NewLine + "Конечный массив: " + Environment.NewLine;
-                for (int i = 0; i < n; i++)
+                for (int i = 0; i < n; i+=2)
                 {
-                    if (i % 2 == 0)
+                    for(int j = 0; j < n; j++)
                     {
-                        mas[i] = VectorX;
+                        mas[j][i] = VectorX[j];
                     }
+                }
+                for (int i = 0; i < mas.Length; i++)
+                {
                     for (int j = 0; j < mas[i].Length; j++)
                     {
                         textBox2.Text += $"{mas[i][j]} ";

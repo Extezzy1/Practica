@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.EnterN = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.ResultButton = new System.Windows.Forms.Button();
             this.ResultTextBox = new System.Windows.Forms.TextBox();
@@ -36,16 +35,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.EnterA = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.EnterN = new System.Windows.Forms.TextBox();
             this.EnterM = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
-            // 
-            // EnterN
-            // 
-            this.EnterN.Location = new System.Drawing.Point(198, 18);
-            this.EnterN.Name = "EnterN";
-            this.EnterN.Size = new System.Drawing.Size(136, 20);
-            this.EnterN.TabIndex = 3;
             // 
             // label1
             // 
@@ -59,7 +54,7 @@
             // ResultButton
             // 
             this.ResultButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResultButton.Location = new System.Drawing.Point(107, 180);
+            this.ResultButton.Location = new System.Drawing.Point(102, 226);
             this.ResultButton.Name = "ResultButton";
             this.ResultButton.Size = new System.Drawing.Size(130, 39);
             this.ResultButton.TabIndex = 7;
@@ -69,7 +64,7 @@
             // 
             // ResultTextBox
             // 
-            this.ResultTextBox.Location = new System.Drawing.Point(35, 245);
+            this.ResultTextBox.Location = new System.Drawing.Point(26, 287);
             this.ResultTextBox.Multiline = true;
             this.ResultTextBox.Name = "ResultTextBox";
             this.ResultTextBox.ReadOnly = true;
@@ -79,7 +74,7 @@
             // 
             // EnterB
             // 
-            this.EnterB.Location = new System.Drawing.Point(198, 129);
+            this.EnterB.Location = new System.Drawing.Point(198, 182);
             this.EnterB.Name = "EnterB";
             this.EnterB.Size = new System.Drawing.Size(136, 20);
             this.EnterB.TabIndex = 12;
@@ -87,7 +82,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(125, 132);
+            this.label3.Location = new System.Drawing.Point(125, 185);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(47, 13);
             this.label3.TabIndex = 11;
@@ -95,7 +90,7 @@
             // 
             // EnterA
             // 
-            this.EnterA.Location = new System.Drawing.Point(198, 89);
+            this.EnterA.Location = new System.Drawing.Point(198, 142);
             this.EnterA.Name = "EnterA";
             this.EnterA.Size = new System.Drawing.Size(136, 20);
             this.EnterA.TabIndex = 10;
@@ -103,11 +98,18 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(125, 89);
+            this.label2.Location = new System.Drawing.Point(125, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Введи a";
+            // 
+            // EnterN
+            // 
+            this.EnterN.Location = new System.Drawing.Point(198, 18);
+            this.EnterN.Name = "EnterN";
+            this.EnterN.Size = new System.Drawing.Size(136, 20);
+            this.EnterN.TabIndex = 3;
             // 
             // EnterM
             // 
@@ -115,6 +117,7 @@
             this.EnterM.Name = "EnterM";
             this.EnterM.Size = new System.Drawing.Size(136, 20);
             this.EnterM.TabIndex = 14;
+            this.EnterM.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.EnterM_KeyPress);
             // 
             // label4
             // 
@@ -125,11 +128,31 @@
             this.label4.TabIndex = 13;
             this.label4.Text = "Введи количество столбцов";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(198, 93);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.Size = new System.Drawing.Size(136, 20);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(23, 96);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(131, 13);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Введи элемент массива";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(346, 409);
+            this.ClientSize = new System.Drawing.Size(346, 451);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.EnterM);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.EnterB);
@@ -148,8 +171,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox EnterN;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ResultButton;
         private System.Windows.Forms.TextBox ResultTextBox;
@@ -157,8 +178,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox EnterA;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox EnterN;
         private System.Windows.Forms.TextBox EnterM;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label5;
     }
 }
 

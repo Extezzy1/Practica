@@ -6,6 +6,7 @@ namespace _5._1_console
     {
         static void Main(string[] args)
         {
+            double h;
             Console.Write("Введи a >> ");
             if (int.TryParse(Console.ReadLine(), out int a))
             {
@@ -13,7 +14,7 @@ namespace _5._1_console
                 if (int.TryParse(Console.ReadLine(), out int b))
                 {
                     Console.Write("Введи h >> ");
-                    if (int.TryParse(Console.ReadLine(), out int h))
+                    if (double.TryParse(Console.ReadLine(), out h))
                     {
 
                         if (h <= 0)
@@ -23,7 +24,7 @@ namespace _5._1_console
                         }
                         if (a < b)
                         {
-                            for (int i = a; i <= b; i += h)
+                            for (double i = a; i <= b; i += h)
                             {
                                 try
                                 {
@@ -45,7 +46,7 @@ namespace _5._1_console
                         }
                         else if (a > b)
                         {
-                            for (int i = b; i <= a; i += h)
+                            for (double i = b; i <= a; i += h)
                             {
                                 try
                                 {
@@ -72,7 +73,7 @@ namespace _5._1_console
             }
             else Console.WriteLine("Неверное значение a!");
         }
-        static double fx(int i)
+        static double fx(double i)
         {
             return Math.Round(Math.Exp((Math.Pow((i - 1), 2) / i)), 5);
         }

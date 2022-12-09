@@ -21,21 +21,12 @@ namespace _6._4_console
             }
 
             int[][] mas = new int[n][];
-
+            
             for (int i = 0; i < n; i++) mas[i] = new int[n];
 
             EnterElArray(ref mas);
-
-            int X;
-            Console.Write("Введи размерность вектора (X) >> ");
-            while (!int.TryParse(Console.ReadLine(), out X) || X <= 0)
-            {
-                Console.WriteLine("Неверное значение X! X должно быть числом большим нуля");
-                Console.Write("Введи размерность вектора (X) >> ");
-            }
-
-            int[] XVector = new int[X];
-            for (int i = 0; i < X; i++)
+            int[] XVector = new int[n];
+            for (int i = 0; i < n; i++)
             {
                 int item;
                 Console.Write($"Введи [{i}] элемент вектора >> ");
@@ -52,7 +43,10 @@ namespace _6._4_console
 
             for (int i = 0; i < n; i += 2)
             {
-                mas[i] = XVector;
+                for(int j = 0; j < n; j++)
+                {
+                    mas[j][i] = XVector[j];
+                }
             }
             Console.WriteLine();
             Console.WriteLine();

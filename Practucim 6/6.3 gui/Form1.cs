@@ -32,7 +32,7 @@ namespace _6._3_gui
                 {
                     for (int j = 0; j < n; j++)
                     {
-                        mas[i, j] = rnd.Next(0, 1000);
+                        mas[i, j] = rnd.Next(-1000, 1000);
                         resultTextBox.Text += $"{mas[i, j]} ";
                     }
                     resultTextBox.Text += Environment.NewLine;

@@ -16,6 +16,9 @@ namespace _6._1._2_gui
         //Задачи из данного пункта решить двумя способами, используя одномерный массив, а затем двумерный.
         //Размерность массива вводится с клавиатуры.
         // Двумерный массив
+        private int n, m;
+        private int[,] mas;
+        private int i = 0, j = 0;
         public Form1()
         {
             InitializeComponent();
@@ -23,39 +26,69 @@ namespace _6._1._2_gui
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int n, m;
-            double a, b;
-            if (int.TryParse(EnterN.Text, out n) && n > 0 && double.TryParse(EnterA.Text, out a) &&
-                double.TryParse(EnterB.Text, out b) && int.TryParse(EnterM.Text, out m) && m > 0)
+            if (double.TryParse(EnterA.Text, out double a) && double.TryParse(EnterB.Text, out double b))
             {
-                int[,] mas = new int[n,m];
-                Random rnd = new Random();
-                ResultTextBox.Text = "Изначальный массив:" + Environment.NewLine;
+                ResultTextBox.Text = "Изначальный массив: " + Environment.NewLine;
                 for (int i = 0; i < n; i++)
                 {
                     for (int j = 0; j < m; j++)
                     {
-                        mas[i, j] = rnd.Next(0, 1000);
                         ResultTextBox.Text += $"{mas[i, j]} ";
                     }
                     ResultTextBox.Text += Environment.NewLine;
                 }
-
-                ResultTextBox.Text += Environment.NewLine + Environment.NewLine + "Конечный массив: " + Environment.NewLine;
-
                 for (int i = 0; i < n; i++)
                 {
                     for (int j = 0; j < m; j++)
                     {
-                        if (mas[i, j] >= a && mas[i, j] <= b) mas[i, j] = 0;
+                        if (mas[i, j] <= b && mas[i, j] >= a) mas[i, j] = 0;
+                    }
+                }
+                ResultTextBox.Text += Environment.NewLine + "Массив после преобразований: " + Environment.NewLine;
+                for (int i = 0; i < n; i++)
+                {
+                    for (int j = 0; j < m; j++)
+                    {
                         ResultTextBox.Text += $"{mas[i, j]} ";
                     }
                     ResultTextBox.Text += Environment.NewLine;
                 }
-
-
             }
-            else ResultTextBox.Text = "Неверные данные!";
+            else MessageBox.Show("Введены неверные данные!");
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                if (int.TryParse(textBox1.Text, out int number))
+                {
+                    if (i == n - 1 && j == m - 1) textBox1.ReadOnly = true;
+                    mas[i, j] = number;
+                    j++;
+                    if (j == m)
+                    {
+                        j = 0;
+                        i++;
+                    }
+                    textBox1.Text = "";
+                }
+                else MessageBox.Show("Значение должно быть целым числом!");
+            }
+        }
+
+        private void EnterM_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                this.textBox1.ReadOnly = false;
+
+                if (!int.TryParse(EnterN.Text, out this.n) || !int.TryParse(EnterM.Text, out this.m) || n < 0 || m < 0)
+                {
+                    MessageBox.Show("Неверное значение!");
+                }
+                else this.mas = new int[n, m];
+            }
         }
     }
 }
