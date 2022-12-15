@@ -12,8 +12,11 @@ namespace _10._1_console
     {
         static void Main(string[] args)
         {
-            string pathTemp = "C:\\Temp";
-            Directory.Delete(pathTemp, true);
+            string pathTemp = "D:\\Temp";
+            if (Directory.Exists(pathTemp))
+            {
+                Directory.Delete(pathTemp, true);
+            }
             string K1 = pathTemp + "\\K1";
             string K2 = pathTemp + "\\K2";
             string t1 = K1 + "\\t1.txt";

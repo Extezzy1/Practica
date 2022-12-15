@@ -34,12 +34,16 @@ namespace _9._1_gui
                 FileStream f = new FileStream("output.dat", FileMode.Open);
                 using (BinaryReader reader = new BinaryReader(f))
                 {
-                    int counter = 1;
-                    while (reader.PeekChar() > -1)
+                    using (StreamWriter wr = new StreamWriter(File.Open("output.txt", FileMode.Create), Encoding.UTF8))
                     {
-                        double number = reader.ReadDouble();
-                        if (counter % 3 == 0) textBox2.Text += number + Environment.NewLine;
-                        counter++;
+                        int counter = 1;
+                        while (reader.PeekChar() > -1)
+                        {
+                            double number = reader.ReadDouble();
+                            wr.WriteLine(number);
+                            if (counter % 3 == 0) textBox2.Text += number + Environment.NewLine;
+                            counter++;
+                        }
                     }
                 }
             }

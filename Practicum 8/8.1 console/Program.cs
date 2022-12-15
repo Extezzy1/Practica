@@ -12,7 +12,7 @@ namespace _8._1_console
     {
         static void Main(string[] args)
         {
-            Console.Write("Введи искомую строку >> ");
+            Console.Write("Введи строку >> ");
             string str = Console.ReadLine();
             int lenght = 0;
             Console.Write("Введи длину >> ");
